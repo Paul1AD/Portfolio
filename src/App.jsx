@@ -1,5 +1,7 @@
 import styles from "./style";
 
+import {Navbar, Hero, About, LatestFooter, SectionShow} from "./components";
+
 function App() {
   return (
     <div className="bg-primary w-full overflow-hidden">
@@ -7,7 +9,7 @@ function App() {
       <header className="App-header">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            Navbar
+            <Navbar/>
           </div>
         </div>
       </header>
@@ -15,19 +17,31 @@ function App() {
       {/*Main*/}
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          Main
+          <Hero/>
         </div>
       </div>
 
       {/*Section*/}
       <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          Setup
+          <About/>
         </div>
       </div>
 
 
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+        <SectionShow/>
+        </div>
+      </div>
+
       {/*Footer*/}
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+        <LatestFooter/>
+        </div>
+      </div>
+
     </div>
   );
 }
